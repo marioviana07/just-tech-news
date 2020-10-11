@@ -1,5 +1,6 @@
 // import the Sequelize constructor from the library
 const Sequelize = require('sequelize');
+const sequelize = require('../../config/connection');
 
 require('dotenv').config();
 
@@ -8,12 +9,7 @@ const sequelize = new Sequelize(process.env.DB_NAME, process.env.DB_USER, proces
     host: 'localhost',
     dialect: 'mysql',
     port: 3306
-        // const sequelize = new Sequelize('just_tech_news_db', 'username', 'password', {
-        //     host: 'localhost',
-        //     dialect: 'mysql',
-        //     port: 3306,
-        //     username: 'root',
-        //     password: 'Antonio7'
+
 });
 
 module.exports = sequelize;
